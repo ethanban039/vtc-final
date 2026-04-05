@@ -195,6 +195,9 @@ ul {
 .nav-links > li > a i {
     font-size: 0.65rem;
     transition: var(--transition);
+    padding: 0.75rem;
+    margin: -0.75rem -0.5rem -0.75rem 0;
+    cursor: pointer;
 }
 
 /* Dropdown */

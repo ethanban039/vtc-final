@@ -36,21 +36,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---------- Dropdown Toggles ----------
     const dropdowns = document.querySelectorAll('.has-dropdown > a');
     dropdowns.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const parentLi = link.parentElement;
-            if (window.innerWidth <= 1024) {
-                if (parentLi.classList.contains('open')) {
-                    // Already open — allow navigation to the parent link
-                    return;
-                }
-                // First click — open dropdown, don't navigate
+        const chevron = link.querySelector('i');
+        if (chevron) {
+            // Make chevron the dedicated toggle
+            chevron.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
+                const parentLi = link.parentElement;
                 // Close other open dropdowns
                 document.querySelectorAll('.has-dropdown.open').forEach(el => {
                     if (el !== parentLi) el.classList.remove('open');
                 });
                 parentLi.classList.toggle('open');
+            });
+        }
+
+        link.addEventListener('click', (e) => {
+            const parentLi = link.parentElement;
+            if (window.innerWidth <= 1024 && !parentLi.classList.contains('open')) {
+                // Dropdown closed — open it instead of navigating
+                e.preventDefault();
+                document.querySelectorAll('.has-dropdown.open').forEach(el => {
+                    if (el !== parentLi) el.classList.remove('open');
+                });
+                parentLi.classList.add('open');
             }
+            // If open, allow normal navigation
         });
     });
 
