@@ -113,13 +113,21 @@ ul {
     padding: 2rem 1.5rem 1.5rem;
     border-bottom: 1px solid var(--gray-100);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    position: relative;
 }
 
 .nav-logo {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.nav-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-text {
@@ -138,6 +146,13 @@ ul {
     margin-top: 2px;
 }
 
+.hero-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    display: block;
+}
+
 .nav-close {
     display: none;
     background: none;
@@ -147,6 +162,9 @@ ul {
     cursor: pointer;
     padding: 0.25rem;
     line-height: 1;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 .nav-links {
@@ -1355,6 +1373,129 @@ ul {
     color: var(--white);
 }
 
+/* ---------- Cake Menu Two-Column Layout ---------- */
+.cake-menu-container {
+    max-width: 1200px !important;
+}
+
+.cake-menu-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cake-menu-panel {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-100);
+    height: 100%;
+}
+
+.cake-menu-panel--special {
+    background: linear-gradient(145deg, #fff9fa, #fff);
+    border-color: var(--pink-200);
+}
+
+.cake-menu-heading {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.cake-menu-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--pink-accent);
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.cake-menu-brand {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gray-400);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.cake-menu-charge {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    text-align: center;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.cake-menu-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.cake-menu-item:last-of-type {
+    border-bottom: none;
+}
+
+.cake-menu-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.2rem;
+}
+
+.cake-menu-item p {
+    font-size: 0.82rem;
+    color: var(--gray-400);
+    line-height: 1.5;
+}
+
+.cake-menu-notes {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+}
+
+.cake-menu-notes-title {
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.cake-menu-notes p {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+}
+
+.cake-menu-dietary {
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--pink-accent);
+    text-align: center;
+}
+
 /* ---------- Menu Items ---------- */
 .menu-grid {
     display: grid;
@@ -2025,6 +2166,23 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .nav-logo-img {
+        height: 60px;
+    }
+
+    .hero-logo {
+        width: 90px;
+        margin: 0 auto 1rem;
+    }
+
+    .cake-menu-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .cake-menu-panel {
+        padding: 1.5rem 1.25rem;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 2rem;

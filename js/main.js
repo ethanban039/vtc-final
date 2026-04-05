@@ -37,15 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdowns = document.querySelectorAll('.has-dropdown > a');
     dropdowns.forEach(link => {
         link.addEventListener('click', (e) => {
-            // Allow navigation if the page link is clicked directly
-            // Only toggle dropdown if chevron area clicked or on mobile
             const parentLi = link.parentElement;
-            if (window.innerWidth <= 1024 || parentLi.classList.contains('open')) {
-                // Toggle dropdown
-                if (e.target.closest('i') || window.innerWidth <= 1024) {
-                    e.preventDefault();
-                    parentLi.classList.toggle('open');
+            if (window.innerWidth <= 1024) {
+                if (parentLi.classList.contains('open')) {
+                    // Already open — allow navigation to the parent link
+                    return;
                 }
+                // First click — open dropdown, don't navigate
+                e.preventDefault();
+                // Close other open dropdowns
+                document.querySelectorAll('.has-dropdown.open').forEach(el => {
+                    if (el !== parentLi) el.classList.remove('open');
+                });
+                parentLi.classList.toggle('open');
             }
         });
     });

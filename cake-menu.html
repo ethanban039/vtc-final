@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/jpeg" href="backgroundlogo.jpg">
 </head>
 <body>
     <nav class="side-nav" id="sideNav">
-        <div class="nav-header"><div class="nav-logo"><span class="logo-text">Vee The Cake</span><span class="logo-tagline">Nottingham</span></div><button class="nav-close" id="navClose" aria-label="Close navigation">&times;</button></div>
+        <div class="nav-header"><div class="nav-logo"><img src="backgroundlogo.jpg" alt="Vee The Cake" class="nav-logo-img"></div><button class="nav-close" id="navClose" aria-label="Close navigation">&times;</button></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li class="has-dropdown"><a href="wedding-cakes.html">Wedding Cakes <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="consultations.html">Consultations</a></li></ul></li>
@@ -49,52 +50,149 @@
     </header>
 
     <section class="page-content">
-        <div class="container">
-            <div class="content-block">
-                <h2>Sponge Flavours</h2>
-                <p>Choose from our selection of freshly baked sponge flavours. Each tier of your cake can be a different flavour.</p>
-                <div class="menu-grid">
-                    <div class="menu-item"><div><div class="menu-item-name">Classic Vanilla</div><div class="menu-item-desc">Light and fluffy vanilla sponge with a rich vanilla flavour</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Rich Chocolate</div><div class="menu-item-desc">Moist, indulgent chocolate sponge made with premium cocoa</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Red Velvet</div><div class="menu-item-desc">Classic red velvet sponge with a hint of cocoa</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Lemon</div><div class="menu-item-desc">Zesty lemon sponge with a fresh, citrus flavour</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Carrot Cake</div><div class="menu-item-desc">Spiced carrot sponge with walnuts and warming spices</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">White Chocolate</div><div class="menu-item-desc">Delicate white chocolate sponge with a creamy sweetness</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Strawberry</div><div class="menu-item-desc">Light strawberry sponge with real strawberry pieces</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Coconut</div><div class="menu-item-desc">Tropical coconut sponge with desiccated coconut</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Biscoff</div><div class="menu-item-desc">Caramelised biscuit flavoured sponge - a modern favourite</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Salted Caramel</div><div class="menu-item-desc">Sweet and salty caramel sponge with a buttery finish</div></div></div>
-                </div>
-            </div>
+        <div class="container cake-menu-container">
+            <div class="cake-menu-columns">
+                <!-- Standard Flavours -->
+                <div class="cake-menu-col">
+                    <div class="cake-menu-panel">
+                        <h2 class="cake-menu-heading">Standard Cake Flavour Menu</h2>
+                        <p class="cake-menu-label">Signature Flavours</p>
+                        <p class="cake-menu-brand">Vee The Cake</p>
 
-            <div class="content-block">
-                <h2>Fillings &amp; Frostings</h2>
-                <p>Complement your chosen sponge with our delicious fillings and frostings.</p>
-                <div class="menu-grid">
-                    <div class="menu-item"><div><div class="menu-item-name">Vanilla Buttercream</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Chocolate Ganache</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Cream Cheese Frosting</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">White Chocolate Ganache</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Strawberry Jam &amp; Buttercream</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Salted Caramel Drizzle</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Biscoff Spread</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Lemon Curd</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Fresh Fruit</div></div></div>
-                </div>
-            </div>
+                        <div class="cake-menu-item">
+                            <h3>Vanilla Berry</h3>
+                            <p>Classic vanilla cake filled with a choice of strawberry or raspberry jam and vanilla bean buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Salted Caramel</h3>
+                            <p>Classic vanilla sponge layered with velvety salted caramel and salted caramel buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Cookies and Cream</h3>
+                            <p>Moist cookies &amp; cream cake filled with chopped Oreo biscuits and crushed Oreo vanilla buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Coffee Walnuts</h3>
+                            <p>Aromatic coffee sponge layered with chopped walnuts and rich espresso buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Cherry Bakewell</h3>
+                            <p>Delight almond cake filled with cherry conserve and silky almond buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Classic Red Velvet</h3>
+                            <p>Luscious red velvet cake filled with vanilla-cream cheese frosting and vanilla bean buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Raspberry Red Velvet</h3>
+                            <p>Luscious red velvet cake filled with raspberry jam and creamy white chocolate buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Vanilla</h3>
+                            <p>Rich Belgian chocolate sponge layered with whipped vanilla bean buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Heaven</h3>
+                            <p>Rich Belgian chocolate sponge layered with creamy dark chocolate buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Oreo</h3>
+                            <p>Belgian chocolate cake filled with chopped Oreo biscuits and crunched Oreo chocolate buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Mocha</h3>
+                            <p>Rich Belgian chocolate sponge layered with velvety mocha buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Rolo</h3>
+                            <p>Belgian chocolate cake layered with salted caramel sauce and salted caramel chocolate buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Reese</h3>
+                            <p>Belgian chocolate cake filled with crunchy peanut butter and dark chocolate buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Lemony Lemon</h3>
+                            <p>Moist zesty lemon cake filled with luscious tangy lemon curd and fresh lemon buttercream</p>
+                        </div>
 
-            <div class="content-block">
-                <h2>Finishes</h2>
-                <div class="menu-grid">
-                    <div class="menu-item"><div><div class="menu-item-name">Fondant Icing</div><div class="menu-item-desc">Smooth, elegant finish - perfect for intricate designs</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Buttercream</div><div class="menu-item-desc">Smooth or textured buttercream - modern and delicious</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Semi-Naked</div><div class="menu-item-desc">Rustic look with a thin layer of buttercream showing the sponge</div></div></div>
-                    <div class="menu-item"><div><div class="menu-item-name">Ganache Drip</div><div class="menu-item-desc">Chocolate or coloured ganache drip for a modern finish</div></div></div>
+                        <div class="cake-menu-notes">
+                            <p class="cake-menu-notes-title">Please note:</p>
+                            <p>&rarr; Celebration cakes: tiered buttercream cakes and all fondant cakes will be crumb coated with white/dark chocolate ganache, finished with a choice of vanilla buttercream or fondant</p>
+                            <p>&rarr; Wedding cakes: we crumb coat all wedding cakes with white/dark chocolate ganache and finish with a choice of vanilla buttercream or fondant</p>
+                        </div>
+                        <p class="cake-menu-dietary">Eggless | Nut Free | Dairy Free | Gluten Free | Vegan cake menu is available</p>
+                    </div>
+                </div>
+
+                <!-- Special Flavours -->
+                <div class="cake-menu-col">
+                    <div class="cake-menu-panel cake-menu-panel--special">
+                        <h2 class="cake-menu-heading">Special Flavours</h2>
+                        <p class="cake-menu-label">Premium Selection</p>
+                        <p class="cake-menu-brand">Vee The Cake</p>
+                        <p class="cake-menu-charge">An additional charge applies to celebration cakes when selecting from this special flavour menu. Wedding cakes are exempt from this charge.</p>
+
+                        <div class="cake-menu-item">
+                            <h3>Ultimate Biscoff</h3>
+                            <p>Scrumptious Biscoff cake filled with chopped Biscoff biscuit and smooth Biscoff buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>White Chocolate Raspberry</h3>
+                            <p>White chocolate mud cake filled with raspberry jam and creamy white chocolate buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>White Chocolate Ginger</h3>
+                            <p>White chocolate &amp; ginger mud cake filled with orange caramel and warming ginger buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Orange</h3>
+                            <p>Chocolate orange cake filled with chopped choc orange and chocolate orange buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Chocolate Nutella</h3>
+                            <p>Rich Belgian chocolate cake filled with Nutella whipped cream and Nutella buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Dirty Chai Latte</h3>
+                            <p>Dirty chai latte cake filled with chai spiced caramel and rich espresso buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Sticky Toffee</h3>
+                            <p>Sticky date cake filled with salted caramel sauce and salted caramel buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Strawberry Lemonade</h3>
+                            <p>Moist lemon sponge filled with strawberry jam and strawberry buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Coconut &amp; Lime</h3>
+                            <p>Creamy coconut cake filled with tangy lime curd and creamy coconut buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Passionfruit</h3>
+                            <p>Tender passionfruit cake filled with passionfruit curd and fresh passionfruit curd buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Spiced Carrot</h3>
+                            <p>Cinnamon spiced carrot cake with walnuts filled with vanilla-cream cheese frosting and whipped vanilla bean buttercream</p>
+                        </div>
+                        <div class="cake-menu-item">
+                            <h3>Rich Fruitcake</h3>
+                            <p>Traditional fruitcake with a rich, velvety texture, full flavoured with spices and moist with overnight soaking of dried fruit, packed with walnuts, covered with marzipan and fondant</p>
+                        </div>
+
+                        <div class="cake-menu-notes">
+                            <p class="cake-menu-notes-title">Please note:</p>
+                            <p>&rarr; Celebration cakes: tiered buttercream cakes and all fondant cakes will be crumb coated with white/dark chocolate ganache</p>
+                            <p>&rarr; Wedding cakes: we crumb coat all wedding cakes with white/dark chocolate ganache and finish with a choice of vanilla buttercream or fondant</p>
+                        </div>
+                        <p class="cake-menu-dietary">Eggless | Nut Free | Dairy Free | Gluten Free | Vegan cake menu is available</p>
+                    </div>
                 </div>
             </div>
 
             <div class="content-block" style="text-align: center;">
-                <p><em>Custom flavour combinations available upon request. Please let us know if you have any dietary requirements or allergies.</em></p>
                 <a href="celebration-cake-order.html" class="btn btn-primary" style="margin-top: 1rem;">Start Your Enquiry</a>
             </div>
         </div>
