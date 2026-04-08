@@ -1,0 +1,126 @@
+[build]
+  publish = "."
+
+# Pretty URLs — /contact instead of /contact.html
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/wedding-cakes"
+  to = "/wedding-cakes.html"
+  status = 200
+
+[[redirects]]
+  from = "/celebration-cakes"
+  to = "/celebration-cakes.html"
+  status = 200
+
+[[redirects]]
+  from = "/cupcakes"
+  to = "/cupcakes.html"
+  status = 200
+
+[[redirects]]
+  from = "/dessert-table"
+  to = "/dessert-table.html"
+  status = 200
+
+[[redirects]]
+  from = "/macaroons"
+  to = "/macaroons.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/ordering-faq"
+  to = "/ordering-faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/consultations"
+  to = "/consultations.html"
+  status = 200
+
+[[redirects]]
+  from = "/flavour-menu"
+  to = "/flavour-menu.html"
+  status = 200
+
+[[redirects]]
+  from = "/cake-menu"
+  to = "/cake-menu.html"
+  status = 200
+
+[[redirects]]
+  from = "/cupcakes-menu"
+  to = "/cupcakes-menu.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms-and-conditions"
+  to = "/terms-and-conditions.html"
+  status = 200
+
+[[redirects]]
+  from = "/celebration-cake-order"
+  to = "/celebration-cake-order.html"
+  status = 200
+
+[[redirects]]
+  from = "/wedding-cake-order"
+  to = "/wedding-cake-order.html"
+  status = 200
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://*.tile.openstreetmap.org; connect-src 'self'; frame-ancestors 'none'"
+
+# Cache HTML — short cache, must revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cache static assets — long-lived
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/gallery_images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
