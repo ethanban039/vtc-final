@@ -52,24 +52,13 @@
     <section class="page-content">
         <div class="container">
             <div class="order-form-wrapper">
-                <form id="celebrationOrderForm" class="order-form" action="https://formsubmit.co/info@veethecake.co.uk" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="_subject" value="Celebration Cake Order - Vee The Cake Website">
-                    <input type="hidden" name="_next" value="https://www.veethecake.co.uk/celebration-cake-order.html?submitted=true">
-                    <input type="hidden" name="_template" value="table">
+                <form id="celebrationOrderForm" class="order-form" name="celebration-cake-enquiry" method="POST" data-netlify="true" enctype="multipart/form-data">
 
-                    <div class="form-consent">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="consent" required>
-                            <span class="checkmark"></span>
-                            <span>I confirm that the information I provide is accurate, and I consent to Vee The Cake contacting me regarding this enquiry.</span>
-                        </label>
-                    </div>
-
-                    <!-- Section 1: Customer Information -->
+                    <!-- Section 1: Your Details -->
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="section-number">1</span>
-                            <h2>Customer Information</h2>
+                            <h2>Your Details</h2>
                         </div>
 
                         <div class="form-group">
@@ -77,166 +66,67 @@
                             <input type="text" id="c-name" name="name" required placeholder="Full name">
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="c-phone">Phone Number *</label>
-                                <input type="tel" id="c-phone" name="phone" required placeholder="07xxx xxxxxx">
-                            </div>
-                            <div class="form-group">
-                                <label for="c-email">Email Address *</label>
-                                <input type="email" id="c-email" name="email" required placeholder="your@email.com">
-                            </div>
+                        <div class="form-group">
+                            <label for="c-email">Email *</label>
+                            <input type="email" id="c-email" name="email" required placeholder="your@email.com">
                         </div>
 
                         <div class="form-group">
-                            <label>Preferred Contact Method *</label>
+                            <label>Occasion (select all that apply)</label>
                             <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="contact_method" value="WhatsApp" required>
-                                    <span class="radio-custom"></span>
-                                    WhatsApp
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="Wedding">
+                                    <span class="checkmark"></span>
+                                    Wedding
                                 </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="contact_method" value="iMessage">
-                                    <span class="radio-custom"></span>
-                                    iMessage (iPhone Only)
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="Celebration">
+                                    <span class="checkmark"></span>
+                                    Celebration
                                 </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="contact_method" value="Email">
-                                    <span class="radio-custom"></span>
-                                    Email
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="contact_method" value="Other">
-                                    <span class="radio-custom"></span>
-                                    Other
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="Corporate Event">
+                                    <span class="checkmark"></span>
+                                    Corporate Event
                                 </label>
                             </div>
-                            <input type="text" id="c-contact-other" name="contact_method_other" class="conditional-field" data-show-when="contact_method=Other" placeholder="Please specify your preferred contact method">
                         </div>
-
-                        <p class="form-note"><i class="fas fa-info-circle"></i> Please note: After sending your email, we will notify you via text.</p>
                     </div>
 
-                    <!-- Section 2: Event Details -->
+                    <!-- Section 2: Event & Cake Details -->
                     <div class="form-section">
                         <div class="form-section-header">
                             <span class="section-number">2</span>
-                            <h2>Event Details</h2>
+                            <h2>Event &amp; Cake Details</h2>
                         </div>
 
                         <div class="form-group">
-                            <label>Type of Celebration *</label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="celebration_type" value="Birthday" required>
-                                    <span class="radio-custom"></span>
-                                    Birthday
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="celebration_type" value="Anniversary">
-                                    <span class="radio-custom"></span>
-                                    Anniversary
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="celebration_type" value="Baby Shower / Gender Reveal">
-                                    <span class="radio-custom"></span>
-                                    Baby Shower / Gender Reveal
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="celebration_type" value="Graduation">
-                                    <span class="radio-custom"></span>
-                                    Graduation
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="celebration_type" value="Corporate Event">
-                                    <span class="radio-custom"></span>
-                                    Corporate Event
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="celebration_type" value="Other">
-                                    <span class="radio-custom"></span>
-                                    Other
-                                </label>
-                            </div>
-                            <input type="text" name="celebration_type_other" class="conditional-field" data-show-when="celebration_type=Other" placeholder="Please specify your celebration type">
+                            <label for="c-event-date">Date Cake is Required *</label>
+                            <input type="date" id="c-event-date" name="date_required" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="c-event-date">Event Date *</label>
-                            <input type="date" id="c-event-date" name="event_date" required>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="c-pickup-date">Pickup / Delivery Date &amp; Time *</label>
-                                <input type="datetime-local" id="c-pickup-date" name="pickup_date" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Pickup or Delivery *</label>
-                                <div class="radio-group">
-                                    <label class="radio-label">
-                                        <input type="radio" name="pickup_delivery" value="Pickup" required>
-                                        <span class="radio-custom"></span>
-                                        Pickup
-                                    </label>
-                                    <label class="radio-label">
-                                        <input type="radio" name="pickup_delivery" value="Delivery">
-                                        <span class="radio-custom"></span>
-                                        Delivery
-                                    </label>
-                                </div>
-                            </div>
+                            <label for="c-venue">Wedding Venue *</label>
+                            <input type="text" id="c-venue" name="wedding_venue" required placeholder="Venue name and location">
                         </div>
 
                         <div class="form-group">
-                            <label for="c-delivery-postcode">Delivery Postcode (if applicable)</label>
-                            <input type="text" id="c-delivery-postcode" name="delivery_postcode" class="conditional-field" data-show-when="pickup_delivery=Delivery" placeholder="e.g. NG3 5AA">
-                        </div>
-                    </div>
-
-                    <!-- Section 3: Cake Details -->
-                    <div class="form-section">
-                        <div class="form-section-header">
-                            <span class="section-number">3</span>
-                            <h2>Cake Details</h2>
+                            <label for="c-size">Size or Number of Tiers / Portions Required</label>
+                            <input type="text" id="c-size" name="size_tiers_portions" placeholder="e.g. 3 tier, 100 portions">
                         </div>
 
                         <div class="form-group">
-                            <label>Cake Design</label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="cake_design" value="Lambeth">
-                                    <span class="radio-custom"></span>
-                                    Lambeth
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="cake_design" value="Theme Cake">
-                                    <span class="radio-custom"></span>
-                                    Theme Cake
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="cake_design" value="Flower Theme">
-                                    <span class="radio-custom"></span>
-                                    Flower Theme
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="cake_design" value="Other">
-                                    <span class="radio-custom"></span>
-                                    Other
-                                </label>
-                            </div>
-                            <input type="text" name="theme_name" class="conditional-field" data-show-when="cake_design=Theme Cake" placeholder="Theme name">
-                            <input type="text" name="cake_design_other" class="conditional-field" data-show-when="cake_design=Other" placeholder="Please describe your cake design">
+                            <label for="c-budget">Budget</label>
+                            <input type="text" id="c-budget" name="budget" placeholder="e.g. £300 - £500">
                         </div>
 
                         <div class="form-group">
-                            <label for="c-colour-scheme">Colour Cake Scheme *</label>
-                            <input type="text" id="c-colour-scheme" name="colour_scheme" required placeholder="e.g. Pastel pink and white, Blue and gold">
+                            <label for="c-style">Style Preference</label>
+                            <input type="text" id="c-style" name="style_preference" placeholder="e.g. Semi-Naked / Buttercream / Fondant">
                         </div>
 
                         <div class="form-group">
-                            <label for="c-photo">Cake Photo for Inspiration</label>
+                            <label for="c-photo">Photo for Inspiration</label>
                             <div class="file-upload-wrapper">
                                 <input type="file" id="c-photo" name="inspiration_photo" accept="image/*">
                                 <div class="file-upload-label">
@@ -248,13 +138,27 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="c-birthday-name">Birthday Person's Name &amp; Age (if applicable)</label>
-                            <input type="text" id="c-birthday-name" name="birthday_name_age" placeholder="e.g. Sophie, 30">
+                            <label for="c-dessert-type">What Type of Dessert Would You Like to Order?</label>
+                            <select id="c-dessert-type" name="dessert_type">
+                                <option value="">Select a dessert type...</option>
+                                <option value="Bento Box (Cake & Cupcake/Cakesicles)">Bento Box (Cake &amp; Cupcake/Cakesicles)</option>
+                                <option value="Bespoke Cake">Bespoke Cake</option>
+                                <option value="Bespoke Cupcakes (Minimum order is 12)">Bespoke Cupcakes (Minimum order is 12)</option>
+                                <option value="Luxury Macaron Box (Minimum order is 12)">Luxury Macaron Box (Minimum order is 12)</option>
+                                <option value="Macaron Cube">Macaron Cube</option>
+                                <option value="Macaron Tower">Macaron Tower</option>
+                                <option value="Brownie Stack">Brownie Stack</option>
+                                <option value="Cakesicles (Minimum order is 12)">Cakesicles (Minimum order is 12)</option>
+                                <option value="Sugar Cookies (Minimum order is 12)">Sugar Cookies (Minimum order is 12)</option>
+                                <option value="8 inch Cheesecake">8&quot; Cheesecake</option>
+                                <option value="Mini Cheesecakes (Minimum order is 12)">Mini Cheesecakes (Minimum order is 12)</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="c-cake-message">Other Message on Cake / Cake Board (exact wording)</label>
-                            <input type="text" id="c-cake-message" name="cake_message" placeholder="e.g. Happy 30th Birthday Sophie!">
+                            <label for="c-flavour">Flavour</label>
+                            <input type="text" id="c-flavour" name="flavour" placeholder="Check out our Flavour Menu for ideas!">
+                            <p class="form-note"><i class="fas fa-info-circle"></i> Take a look at our <a href="flavour-menu.html">Flavour Menu</a> for available options.</p>
                         </div>
 
                         <div class="form-group">
@@ -273,22 +177,14 @@
                             </div>
                             <textarea name="allergy_details" class="conditional-field" data-show-when="has_allergies=Yes" placeholder="Please detail all allergies and intolerances" rows="3"></textarea>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="c-cake-size">Cake Size *</label>
-                            <select id="c-cake-size" name="cake_size" required>
-                                <option value="">Select a size...</option>
-                                <option value="6 inch (serves 8-10)">6 inch (serves 8–10)</option>
-                                <option value="7 inch (serves 12-15)">7 inch (serves 12–15)</option>
-                                <option value="8 inch (serves 20-25)">8 inch (serves 20–25)</option>
-                                <option value="9 inch (serves 25-30)">9 inch (serves 25–30)</option>
-                                <option value="10 inch (serves 30-40)">10 inch (serves 30–40)</option>
-                                <option value="12 inch (serves 40-50)">12 inch (serves 40–50)</option>
-                                <option value="2 Tier">2 Tier</option>
-                                <option value="3 Tier">3 Tier</option>
-                                <option value="Not sure - need advice">Not sure – need advice</option>
-                            </select>
-                        </div>
+                    <div class="form-consent">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="consent" required>
+                            <span class="checkmark"></span>
+                            <span>I confirm that the information I provide is accurate, and I consent to Vee The Cake contacting me regarding this enquiry.</span>
+                        </label>
                     </div>
 
                     <button type="submit" class="btn btn-primary form-submit">Submit Cake Enquiry</button>

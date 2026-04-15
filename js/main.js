@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return entries;
     }
 
-    // Form submission now handled by FormSubmit.co (action attribute on form tags)
+    // Form submission now handled by Netlify Forms (data-netlify attribute on form tags)
 
     // ---------- Gallery Filter ----------
     const filterButtons = document.querySelectorAll('.filter-btn');
