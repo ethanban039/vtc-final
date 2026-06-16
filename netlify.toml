@@ -63,6 +63,11 @@
   status = 200
 
 [[redirects]]
+  from = "/price-guide"
+  to = "/price-guide.html"
+  status = 200
+
+[[redirects]]
   from = "/terms-and-conditions"
   to = "/terms-and-conditions.html"
   status = 200
