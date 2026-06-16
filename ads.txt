@@ -1,0 +1,3 @@
+# Ads.txt file for Vee The Cake
+# This website does not display any advertisements
+# For more information about ads.txt, visit: https://iabtechlab.com/ads-txt/
