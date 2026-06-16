@@ -55,7 +55,9 @@
     <section class="page-content">
         <div class="container">
             <div class="order-form-wrapper">
-                <form id="weddingOrderForm" class="order-form" name="wedding-cake-enquiry" method="POST" data-netlify="true" enctype="multipart/form-data">
+                <form id="weddingOrderForm" class="order-form" name="wedding-cake-enquiry" method="POST" action="https://api.web3forms.com/submit">
+                    <input type="hidden" name="access_key" value="9c36761a-c27b-48a0-a279-c581fc2ca890">
+                    <input name="_honeypot" type="text" style="display:none;" tabindex="-1" autocomplete="off">
 
                     <div class="form-consent">
                         <label class="checkbox-label">
